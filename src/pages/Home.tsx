@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/Hero';
 import { Link } from 'react-router-dom';
-import { Sofa, BedDouble, Layers, Home as HomeIcon, Building2, Quote } from 'lucide-react';
+import { Sofa, BedDouble, Layers, Home as HomeIcon, Building2, Quote, HelpCircle, ChevronRight } from 'lucide-react';
 import emailjs from 'emailjs-com';
 import { useState } from 'react';
 
@@ -159,6 +159,50 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      {/* Quick FAQ Section */}
+      <section className="bg-gray-50 py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <HelpCircle className="w-12 h-12 mx-auto mb-4 text-green-600" />
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Quick Answers</h2>
+            <p className="text-xl text-gray-600">Get instant answers to our most common questions</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="font-semibold text-gray-900 mb-2">How much do your services cost?</h3>
+              <p className="text-gray-600 text-sm">4-seater sofa from KSh 2,500, 5x6 mattress from KSh 1,800, house cleaning from KSh 4,000. Contact us for personalized quotes.</p>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="font-semibold text-gray-900 mb-2">Do you bring your own equipment?</h3>
+              <p className="text-gray-600 text-sm">Yes! We come fully equipped with eco-friendly cleaning agents, vacuum machines, and steam cleaners.</p>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="font-semibold text-gray-900 mb-2">How long does cleaning take?</h3>
+              <p className="text-gray-600 text-sm">Sofa/mattress cleaning: 1–2 hours. General house cleaning: 2–5 hours depending on size.</p>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="font-semibold text-gray-900 mb-2">Is it safe for kids and pets?</h3>
+              <p className="text-gray-600 text-sm">Absolutely! We use non-toxic, child-safe, and pet-safe cleaning solutions for your family's safety.</p>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/faq" 
+              className="inline-flex items-center bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-colors text-lg font-medium shadow-lg"
+            >
+              View All FAQs
+              <ChevronRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Feedback Form Section */}
       <section className="max-w-2xl mx-auto py-12 px-4">
         <h2 className="text-2xl font-bold mb-6 text-green-700 text-center">Leave Us Your Feedback</h2>

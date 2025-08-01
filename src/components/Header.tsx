@@ -19,6 +19,7 @@ const Header = () => {
               <Link to="/" className="nav-link">Home</Link>
               <Link to="/services" className="nav-link">Services</Link>
               <Link to="/about" className="nav-link">About</Link>
+              <Link to="/faq" className="nav-link">FAQ</Link>
               <Link to="/contact" className="nav-link">Contact</Link>
             </div>
           </nav>
@@ -56,6 +57,7 @@ const Header = () => {
             <Link to="/" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 w-full text-left" onClick={() => setIsMenuOpen(false)}>Home</Link>
             <Link to="/services" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 w-full text-left" onClick={() => setIsMenuOpen(false)}>Services</Link>
             <Link to="/about" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 w-full text-left" onClick={() => setIsMenuOpen(false)}>About</Link>
+            <Link to="/faq" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 w-full text-left" onClick={() => setIsMenuOpen(false)}>FAQ</Link>
             <Link to="/contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-600 hover:bg-gray-50 w-full text-left" onClick={() => setIsMenuOpen(false)}>Contact</Link>
             <div className="flex flex-col space-y-2 px-3 py-2">
               <a
