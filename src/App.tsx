@@ -8,6 +8,11 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
+import CouchCleaning from './pages/CouchCleaning';
+import MattressCleaning from './pages/MattressCleaning';
+import HouseCleaning from './pages/HouseCleaning';
+import OfficeCleaning from './pages/OfficeCleaning';
+import PostConstructionCleaning from './pages/PostConstructionCleaning';
 import VisionMission from './pages/VisionMission';
 import CoreValues from './pages/CoreValues';
 import TargetMarket from './pages/TargetMarket';
@@ -29,6 +34,11 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/services/couch-cleaning" element={<CouchCleaning />} />
+              <Route path="/services/mattress-cleaning" element={<MattressCleaning />} />
+              <Route path="/services/house-cleaning" element={<HouseCleaning />} />
+              <Route path="/services/office-cleaning" element={<OfficeCleaning />} />
+              <Route path="/services/post-construction-cleaning" element={<PostConstructionCleaning />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/vision-mission" element={<VisionMission />} />
