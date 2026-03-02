@@ -65,13 +65,42 @@ const PostConstructionCleaning = () => {
     { type: "Office building", price: "Custom quote" }
   ];
 
+  const faqs = [
+    {
+      question: "How much is post-construction cleaning in Kenya?",
+      answer: "Pricing starts from KSh 8,000 and depends on the debris level, size of property, and scope of cleanup required."
+    },
+    {
+      question: "What does post-construction cleaning include?",
+      answer: "We remove debris, eliminate fine dust, clean floors, polish glass, sanitize surfaces, and detail hard-to-reach spots."
+    },
+    {
+      question: "Do you offer end of tenancy and move-in cleaning in Nairobi?",
+      answer: "Yes. We provide move-in and end of tenancy deep cleaning for newly renovated or vacated homes and offices."
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Post-Construction Cleaning Services | Edesa Home Cleaners</title>
-        <meta name="description" content="Professional post-construction cleaning in Nairobi. Complete debris removal, dust elimination, move-in ready finish. Expert construction cleanup services." />
+        <title>Post-Construction Cleaning Kenya | Edesa Home Cleaners</title>
+        <meta name="description" content="Professional post-construction cleaning in Nairobi and Kenya. Debris removal, dust elimination, and move-in ready finishing by trained cleaners." />
         <meta name="keywords" content="post construction cleaning, debris removal, construction cleanup, renovation cleaning, Nairobi, move-in cleaning" />
-        <link rel="canonical" href="https://edesahomecleaners.com/services/post-construction-cleaning" />
+        <link rel="canonical" href="https://edesacleaners.co.ke/post-construction-cleaning-kenya" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -111,6 +140,15 @@ const PostConstructionCleaning = () => {
         </div>
       </section>
 
+      {/* Intro */}
+      <section className="py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Construction and renovation projects leave behind fine dust, debris, adhesive marks, and residue that normal cleaning cannot handle. Our post-construction cleaning Kenya service uses professional tools and trained cleaners to make properties safe and move-in ready. We support homeowners, contractors, and property managers across Nairobi, including Westlands, Kilimani, Lavington, Karen, Kileleshwa, and Lang'ata, with reliable deep cleanup and detailed finishing.
+          </p>
+        </div>
+      </section>
+
       {/* Key Benefits */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -131,6 +169,21 @@ const PostConstructionCleaning = () => {
               <h3 className="text-xl font-semibold mb-2">Move-in Ready</h3>
               <p className="text-gray-600">Spotless finish ready for occupancy</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                <p className="text-gray-700">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

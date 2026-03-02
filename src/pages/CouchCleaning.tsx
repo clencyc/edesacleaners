@@ -55,13 +55,42 @@ const CouchCleaning = () => {
     { type: "Ottoman", price: "From KSh 800" }
   ];
 
+  const faqs = [
+    {
+      question: "How much does sofa cleaning cost in Nairobi?",
+      answer: "Pricing starts from KSh 2,000 depending on sofa size, fabric type, and stain level. Contact us for a quick quote."
+    },
+    {
+      question: "How long does sofa cleaning take to dry?",
+      answer: "Most sofas dry within 2–4 hours with our fast-drying process, depending on airflow and fabric thickness."
+    },
+    {
+      question: "Do you serve areas like Westlands and Kilimani?",
+      answer: "Yes. We serve homes across Nairobi including Westlands, Kilimani, Kileleshwa, Lavington, Karen, Runda, and Lang'ata."
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Couch & Upholstery Cleaning Services | Edesa Home Cleaners</title>
-        <meta name="description" content="Professional couch and upholstery cleaning in Nairobi. Deep cleaning, stain removal, and sanitization for all fabric types. Book today!" />
+        <title>Sofa & Upholstery Cleaning in Nairobi | Edesa Home Cleaners</title>
+        <meta name="description" content="Restore your sofas to like-new condition. Edesa offers professional sofa and upholstery cleaning in Nairobi. Safe for all fabric types. Book today!" />
         <meta name="keywords" content="couch cleaning, upholstery cleaning, sofa cleaning, stain removal, Nairobi, furniture cleaning" />
-        <link rel="canonical" href="https://edesahomecleaners.com/services/couch-cleaning" />
+        <link rel="canonical" href="https://edesacleaners.co.ke/sofa-cleaning-nairobi" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -74,7 +103,7 @@ const CouchCleaning = () => {
           <div className="text-center">
             <Sofa className="w-16 h-16 mx-auto mb-6 text-green-100" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Couch & Upholstery Cleaning
+              Professional Sofa & Upholstery Cleaning in Nairobi
             </h1>
             <p className="text-xl text-green-100 max-w-2xl mx-auto mb-8">
               Deep cleaning and stain removal for all types of couches and sofas. Restore freshness and comfort to your living space.
@@ -101,6 +130,15 @@ const CouchCleaning = () => {
         </div>
       </section>
 
+      {/* Intro */}
+      <section className="py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Looking for reliable sofa cleaning Nairobi homeowners trust? Your sofa handles daily spills, dust, pet dander, and odors that regular wiping cannot remove. Our professional sofa cleaning Nairobi service uses fabric-safe, eco-friendly methods to lift deep dirt and sanitize upholstery without damage. Edesa's trained cleaners serve Westlands, Kilimani, Kileleshwa, Lavington, Karen, Runda, and Lang'ata with fast-drying, child-safe results.
+          </p>
+        </div>
+      </section>
+
       {/* Key Benefits */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -121,6 +159,21 @@ const CouchCleaning = () => {
               <h3 className="text-xl font-semibold mb-2">Professional Results</h3>
               <p className="text-gray-600">Deep cleaning that extends furniture life</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                <p className="text-gray-700">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -55,13 +55,42 @@ const HouseCleaning = () => {
     { type: "Office space", price: "Custom quote" }
   ];
 
+  const faqs = [
+    {
+      question: "How much do deep cleaning services cost in Nairobi?",
+      answer: "Deep cleaning starts from KSh 4,000 and depends on home size, condition, and any add-on requests."
+    },
+    {
+      question: "What is included in a deep cleaning service?",
+      answer: "We clean kitchens, bathrooms, bedrooms, living areas, skirting boards, switches, and floors, with optional fridge and microwave interior cleaning."
+    },
+    {
+      question: "Do you offer move-in and move-out cleaning in Nairobi?",
+      answer: "Yes. We provide move-in, move-out, post-renovation, and seasonal deep cleaning across Nairobi neighborhoods."
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>General House Deep Cleaning Services | Edesa Home Cleaners</title>
-        <meta name="description" content="Professional house deep cleaning services in Nairobi. Comprehensive cleaning for kitchens, bathrooms, living areas. Eco-friendly products, reliable service." />
+        <title>Deep Cleaning Services in Nairobi | Edesa Home Cleaners</title>
+        <meta name="description" content="Get a thorough deep clean for your home in Nairobi. Edesa's deep cleaning service covers kitchens, bathrooms, bedrooms & more. Book now for a spotless home." />
         <meta name="keywords" content="house cleaning, deep cleaning, home cleaning, kitchen cleaning, bathroom cleaning, Nairobi, professional cleaning" />
-        <link rel="canonical" href="https://edesahomecleaners.com/services/house-cleaning" />
+        <link rel="canonical" href="https://edesacleaners.co.ke/deep-cleaning-nairobi" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -74,7 +103,7 @@ const HouseCleaning = () => {
           <div className="text-center">
             <Home className="w-16 h-16 mx-auto mb-6 text-purple-100" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              General House Deep Cleaning
+              Professional Deep Cleaning Services in Nairobi
             </h1>
             <p className="text-xl text-purple-100 max-w-2xl mx-auto mb-8">
               Comprehensive deep cleaning for your entire home, including kitchens, bathrooms, and living areas. We elevate your living space.
@@ -98,6 +127,15 @@ const HouseCleaning = () => {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Intro */}
+      <section className="py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-lg text-gray-700 leading-relaxed">
+            If your home feels overdue for a serious reset, our deep cleaning services Nairobi families trust go far beyond surface wiping. We target grease buildup, bathroom grime, hidden dust, and high-touch points to sanitize your full home thoroughly. Edesa provides deep cleaning services Nairobi residents in Westlands, Kilimani, Lavington, Kileleshwa, Karen, Runda, and Lang'ata rely on for move-in, move-out, end of tenancy, and seasonal refresh cleaning.
+          </p>
         </div>
       </section>
 
@@ -125,8 +163,53 @@ const HouseCleaning = () => {
         </div>
       </section>
 
-      {/* Cleaning Process */}
+      {/* FAQ */}
       <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                <p className="text-gray-700">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Image Gallery */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Work</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src="/images/housedeep.jpeg" 
+                alt="House deep cleaning service 1" 
+                className="w-full h-64 object-cover"
+              />
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src="/images/housedeep1.jpeg" 
+                alt="House deep cleaning service 2" 
+                className="w-full h-64 object-cover"
+              />
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src="/images/housedeep3.jpeg" 
+                alt="House deep cleaning service 3" 
+                className="w-full h-64 object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cleaning Process */}
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our 6-Step Cleaning Process</h2>
           <div className="space-y-8">
@@ -146,7 +229,7 @@ const HouseCleaning = () => {
       </section>
 
       {/* Benefits List */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">What's Included</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -161,7 +244,7 @@ const HouseCleaning = () => {
       </section>
 
       {/* Pricing */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Transparent Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

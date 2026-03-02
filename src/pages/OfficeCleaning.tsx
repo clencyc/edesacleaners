@@ -55,13 +55,42 @@ const OfficeCleaning = () => {
     { type: "Commercial building", price: "Custom quote" }
   ];
 
+  const faqs = [
+    {
+      question: "Do you provide office cleaning services in Nairobi after work hours?",
+      answer: "Yes. We offer flexible scheduling before office opening, after hours, and weekends to avoid disruptions."
+    },
+    {
+      question: "How much does office cleaning cost in Nairobi?",
+      answer: "Pricing starts from KSh 3,000 and varies by office size, frequency, and special requirements."
+    },
+    {
+      question: "Which Nairobi areas do you cover for office cleaning?",
+      answer: "We serve offices in Westlands, Kilimani, Upper Hill, Lavington, Karen, Kileleshwa, and surrounding areas."
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Office & Commercial Cleaning Services | Edesa Home Cleaners</title>
-        <meta name="description" content="Professional office and commercial cleaning services in Nairobi. Flexible scheduling, quality service, healthy work environment. Contact us today!" />
+        <title>Office Cleaning Services Nairobi | Edesa Home Cleaners</title>
+        <meta name="description" content="Reliable office cleaning services in Nairobi for healthy, productive workspaces. Flexible schedules, trained cleaners, and quality results. Get a quote." />
         <meta name="keywords" content="office cleaning, commercial cleaning, workplace hygiene, business cleaning, Nairobi, professional cleaning" />
-        <link rel="canonical" href="https://edesahomecleaners.com/services/office-cleaning" />
+        <link rel="canonical" href="https://edesacleaners.co.ke/office-cleaning-services-nairobi" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -74,7 +103,7 @@ const OfficeCleaning = () => {
           <div className="text-center">
             <Building2 className="w-16 h-16 mx-auto mb-6 text-indigo-100" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Office & Commercial Cleaning
+              Office Cleaning Services in Nairobi
             </h1>
             <p className="text-xl text-indigo-100 max-w-2xl mx-auto mb-8">
               Reliable and thorough cleaning for offices and commercial spaces. Create a healthy, productive work environment for your team.
@@ -101,6 +130,15 @@ const OfficeCleaning = () => {
         </div>
       </section>
 
+      {/* Intro */}
+      <section className="py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-lg text-gray-700 leading-relaxed">
+            A clean office supports staff wellbeing, productivity, and your brand image. Our office cleaning services Nairobi businesses trust are tailored for daily, weekly, or custom schedules. Edesa's trained team sanitizes desks, washrooms, kitchens, floors, and shared spaces using eco-friendly products and consistent quality checks. We support businesses in Westlands, Kilimani, Upper Hill, Kileleshwa, Lavington, Karen, and nearby areas with reliable commercial cleaning Kenya teams can depend on.
+          </p>
+        </div>
+      </section>
+
       {/* Key Benefits */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -121,6 +159,21 @@ const OfficeCleaning = () => {
               <h3 className="text-xl font-semibold mb-2">Productivity Boost</h3>
               <p className="text-gray-600">Clean environment enhances employee productivity</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                <p className="text-gray-700">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

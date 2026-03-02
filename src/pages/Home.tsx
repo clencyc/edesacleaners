@@ -10,16 +10,16 @@ const services = [
   {
     title: 'Couch Cleaning',
     description: 'Deep cleaning and stain removal for all types of couches and sofas.',
-    image: '/images/couchclean.jpg',
+    image: '/images/couchclean.jpeg',
     icon: <Sofa className="w-8 h-8 text-green-600 mb-2" />,
-    link: '/services/couch-cleaning',
+    link: '/sofa-cleaning-nairobi',
   },
   {
     title: 'Mattress Cleaning',
     description: 'Professional mattress cleaning to remove dust mites, allergens, and stains.',
     image: '/images/matress.jpg',
     icon: <BedDouble className="w-8 h-8 text-green-600 mb-2" />,
-    link: '/services/mattress-cleaning',
+    link: '/mattress-cleaning-nairobi',
   },
   {
     title: 'Carpet & Rug Cleaning',
@@ -31,9 +31,9 @@ const services = [
   {
     title: 'House Deep Cleaning',
     description: 'Comprehensive deep cleaning for your entire home, including kitchens, bathrooms, and living areas.',
-    image: '/images/house deep.jpg',
+    image: '/images/housedeep.jpeg',
     icon: <HomeIcon className="w-8 h-8 text-green-600 mb-2" />,
-    link: '/services/house-cleaning',
+    link: '/deep-cleaning-nairobi',
   },
   {
     title: 'Office Cleaning',
@@ -45,7 +45,7 @@ const services = [
   {
     title: 'Steam Cleaning',
     description: 'Powerful steam cleaning for deep sanitization of surfaces, upholstery, and floors.',
-    image: '/images/steamclean.jpg',
+    image: '/images/steamclean.jpeg',
     icon: <Layers className="w-8 h-8 text-green-600 mb-2" />,
     link: '/services/steam-cleaning',
   },
@@ -120,29 +120,29 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Edesa Home Cleaners - We Don't Just Clean — We Elevate | Professional Cleaning Services Nairobi</title>
-        <meta name="description" content="Professional cleaning services in Nairobi. Couch cleaning, mattress cleaning, house cleaning, office cleaning, and post-construction cleaning. Eco-friendly products, same-day service. Book now!" />
-        <meta name="keywords" content="cleaning services Nairobi, couch cleaning, mattress cleaning, house cleaning, office cleaning, post construction cleaning, steam cleaning, professional cleaners Kenya, eco-friendly cleaning, same-day cleaning service" />
+        <title>Edesa Home Cleaners | Professional House Cleaning Services in Nairobi</title>
+        <meta name="description" content="Edesa Home Cleaners offers trusted, professional home cleaning services in Nairobi. Book sofa, carpet, deep cleaning & more. We don't just clean — we elevate." />
+        <meta name="keywords" content="home cleaning services Nairobi, professional cleaners Nairobi, domestic cleaning services Kenya, trusted home cleaners in Nairobi, affordable house cleaning Nairobi" />
         <meta name="author" content="Edesa Home Cleaners" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Edesa Home Cleaners - Professional Cleaning Services in Nairobi" />
-        <meta property="og:description" content="We Don't Just Clean — We Elevate. Professional couch, mattress, house, and office cleaning services in Nairobi. Eco-friendly products, trusted professionals." />
+        <meta property="og:title" content="Edesa Home Cleaners | Professional House Cleaning Services in Nairobi" />
+        <meta property="og:description" content="Trusted professional home cleaning services in Nairobi. Book sofa, carpet, deep cleaning and more with Edesa Home Cleaners." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://edesahomecleaners.com/" />
-        <meta property="og:image" content="https://edesahomecleaners.com/images/couchclean.jpg" />
+        <meta property="og:url" content="https://edesacleaners.co.ke/" />
+        <meta property="og:image" content="https://edesacleaners.co.ke/images/couchclean.jpeg" />
         <meta property="og:locale" content="en_KE" />
         <meta property="og:site_name" content="Edesa Home Cleaners" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Edesa Home Cleaners - Professional Cleaning Services Nairobi" />
-        <meta name="twitter:description" content="We Don't Just Clean — We Elevate. Professional cleaning services in Nairobi with eco-friendly products and same-day service." />
-        <meta name="twitter:image" content="https://edesahomecleaners.com/images/couchclean.jpg" />
+        <meta name="twitter:title" content="Edesa Home Cleaners | Professional House Cleaning Services in Nairobi" />
+        <meta name="twitter:description" content="Trusted professional home cleaning services in Nairobi. Book sofa, carpet, deep cleaning and more with Edesa Home Cleaners." />
+        <meta name="twitter:image" content="https://edesacleaners.co.ke/images/couchclean.jpeg" />
         <meta name="geo.region" content="KE-30" />
         <meta name="geo.placename" content="Nairobi, Kenya" />
         <meta name="geo.position" content="-1.2921;36.8219" />
         <meta name="ICBM" content="-1.2921, 36.8219" />
-        <link rel="canonical" href="https://edesahomecleaners.com/" />
-        <link rel="alternate" hrefLang="en-ke" href="https://edesahomecleaners.com/" />
-        <link rel="alternate" hrefLang="sw-ke" href="https://edesahomecleaners.com/" />
+        <link rel="canonical" href="https://edesacleaners.co.ke/" />
+        <link rel="alternate" hrefLang="en-ke" href="https://edesacleaners.co.ke/" />
+        <link rel="alternate" hrefLang="sw-ke" href="https://edesacleaners.co.ke/" />
         <script type="application/ld+json">
           {`
             {
@@ -150,7 +150,7 @@ const Home = () => {
               "@type": "LocalBusiness",
               "name": "Edesa Home Cleaners",
               "description": "Professional cleaning services in Nairobi offering couch cleaning, mattress cleaning, house cleaning, and office cleaning.",
-              "url": "https://edesahomecleaners.com",
+              "url": "https://edesacleaners.co.ke",
               "telephone": "+254723014032",
               "email": "info@edesahomecleaners.com",
               "address": {

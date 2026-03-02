@@ -26,7 +26,7 @@ import Owner from './pages/Owner';
 function App() {
   return (
     <HelmetProvider>
-      <BrowserRouter>
+      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <div className="min-h-screen bg-white flex flex-col">
           <Header />
           <main className="flex-1">
@@ -35,10 +35,15 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/services/couch-cleaning" element={<CouchCleaning />} />
+              <Route path="/sofa-cleaning-nairobi" element={<CouchCleaning />} />
               <Route path="/services/mattress-cleaning" element={<MattressCleaning />} />
+              <Route path="/mattress-cleaning-nairobi" element={<MattressCleaning />} />
               <Route path="/services/house-cleaning" element={<HouseCleaning />} />
+              <Route path="/deep-cleaning-nairobi" element={<HouseCleaning />} />
               <Route path="/services/office-cleaning" element={<OfficeCleaning />} />
+              <Route path="/office-cleaning-services-nairobi" element={<OfficeCleaning />} />
               <Route path="/services/post-construction-cleaning" element={<PostConstructionCleaning />} />
+              <Route path="/post-construction-cleaning-kenya" element={<PostConstructionCleaning />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/vision-mission" element={<VisionMission />} />

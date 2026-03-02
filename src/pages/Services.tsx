@@ -7,16 +7,16 @@ const services = [
   {
     title: 'Couch Cleaning',
     description: 'Deep cleaning and stain removal for all types of couches and sofas. Restore freshness and comfort to your living space.',
-    image: '/images/couchclean.jpg',
+    image: '/images/couchclean.jpeg',
     icon: <Sofa className="w-8 h-8 text-green-600 mb-2" />,
-    link: '/services/couch-cleaning',
+    link: '/sofa-cleaning-nairobi',
   },
   {
     title: 'Mattress Cleaning',
     description: 'Professional mattress cleaning to remove dust mites, allergens, and stains for a healthier sleep.',
     image: '/images/matress.jpg',
     icon: <BedDouble className="w-8 h-8 text-green-600 mb-2" />,
-    link: '/services/mattress-cleaning',
+    link: '/mattress-cleaning-nairobi',
   },
   {
     title: 'Carpet & Rug Cleaning',
@@ -28,9 +28,9 @@ const services = [
   {
     title: 'House Deep Cleaning',
     description: 'Comprehensive deep cleaning for your entire home, including kitchens, bathrooms, and living areas.',
-    image: '/images/house deep.jpg',
+    image: '/images/housedeep.jpeg',
     icon: <Home className="w-8 h-8 text-green-600 mb-2" />,
-    link: '/services/house-cleaning',
+    link: '/deep-cleaning-nairobi',
   },
   {
     title: 'Office Cleaning',
@@ -42,7 +42,7 @@ const services = [
   {
     title: 'Steam Cleaning',
     description: 'Powerful steam cleaning for deep sanitization of surfaces, upholstery, and floors. Ideal for allergy-sensitive environments.',
-    image: '/images/steamclean.jpg',
+    image: '/images/steamclean.jpeg',
     icon: <Layers className="w-8 h-8 text-green-600 mb-2" />,
     link: '/services/steam-cleaning',
   },
@@ -65,9 +65,9 @@ const services = [
 const Services = () => (
   <>
     <Helmet>
-      <title>Services | Edesa Home Cleaners</title>
-      <meta name="description" content="Explore our premium cleaning services: couch, mattress, carpet & rug, house deep cleaning, and office cleaning. Serving Nairobi and beyond." />
-      <link rel="canonical" href="https://edesahomecleaners.com/services" />
+      <title>Home Cleaning Services Nairobi | Edesa Home Cleaners</title>
+      <meta name="description" content="Explore trusted home cleaning services in Nairobi from Edesa Home Cleaners: sofa, mattress, deep cleaning, office and more. Get a free quote today." />
+      <link rel="canonical" href="https://edesacleaners.co.ke/services" />
     </Helmet>
     <section className="max-w-6xl mx-auto py-16 px-4">
       <h1 className="text-4xl font-extrabold mb-10 text-green-700 text-center">Our Services</h1>

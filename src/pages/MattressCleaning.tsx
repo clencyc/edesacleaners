@@ -55,13 +55,42 @@ const MattressCleaning = () => {
     { type: "King size mattress", price: "From KSh 2,500" }
   ];
 
+  const faqs = [
+    {
+      question: "How often should I book mattress cleaning in Nairobi?",
+      answer: "For most homes, every 6–12 months is ideal. Homes with allergies, pets, or children may benefit from more frequent cleaning."
+    },
+    {
+      question: "How long does mattress cleaning take?",
+      answer: "Most jobs take 45–90 minutes per mattress, and drying usually takes a few hours depending on ventilation."
+    },
+    {
+      question: "Can you remove dust mites and odors?",
+      answer: "Yes. Our mattress cleaning process targets dust mites, sweat buildup, stains, and lingering odors while being safe for fabrics."
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Mattress Deep Cleaning Services | Edesa Home Cleaners</title>
-        <meta name="description" content="Professional mattress deep cleaning in Nairobi. Remove dust mites, allergens, stains, and odors. Safe, effective, and affordable mattress cleaning services." />
+        <title>Mattress Cleaning in Nairobi | Edesa Home Cleaners</title>
+        <meta name="description" content="Sleep cleaner with Edesa's professional mattress cleaning in Nairobi. We remove dust mites, stains & odors. Safe, fast & affordable. Book now!" />
         <meta name="keywords" content="mattress cleaning, dust mites removal, allergen cleaning, mattress sanitization, Nairobi, deep cleaning" />
-        <link rel="canonical" href="https://edesahomecleaners.com/services/mattress-cleaning" />
+        <link rel="canonical" href="https://edesacleaners.co.ke/mattress-cleaning-nairobi" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.answer,
+              },
+            })),
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
@@ -74,7 +103,7 @@ const MattressCleaning = () => {
           <div className="text-center">
             <BedDouble className="w-16 h-16 mx-auto mb-6 text-blue-100" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Mattress Deep Cleaning
+              Mattress Cleaning Services in Nairobi — Sleep Cleaner Tonight
             </h1>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-8">
               Professional mattress cleaning to remove dust mites, allergens, and stains for a healthier sleep environment.
@@ -101,6 +130,15 @@ const MattressCleaning = () => {
         </div>
       </section>
 
+      {/* Intro */}
+      <section className="py-14 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <p className="text-lg text-gray-700 leading-relaxed">
+            Your mattress can hold dust mites, sweat, allergens, and bacteria that affect sleep and health. Our mattress cleaning Nairobi service uses specialist extraction and sanitizing methods to clean deeply without damaging your mattress. Edesa's trained cleaners provide fast, eco-friendly mattress cleaning Nairobi households rely on in Westlands, Kilimani, Lavington, Karen, Kileleshwa, Runda, and Lang'ata, helping you sleep cleaner and wake up fresher.
+          </p>
+        </div>
+      </section>
+
       {/* Key Benefits */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
@@ -121,6 +159,21 @@ const MattressCleaning = () => {
               <h3 className="text-xl font-semibold mb-2">Hygiene & Health</h3>
               <p className="text-gray-600">Eliminates bacteria and maintains sleeping hygiene</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-10">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-gray-50 rounded-lg p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
+                <p className="text-gray-700">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
